@@ -5,7 +5,7 @@ A command-line tool to authenticate with [bunq](https://www.bunq.com) via OAuth2
 ## Installation
 
 ```bash
-npm install -g bunk
+npm install -g @iovdin/bunk
 ```
 
 Or for local dev:
