@@ -1,6 +1,6 @@
 {
-  "name": "bunk",
-  "version": "0.0.1",
+  "name": "@iovdin/bunk",
+  "version": "1.0.1",
   "description": "bunq CLI download and index transactions into sqlite database",
   "type": "commonjs",
   "bin": {
@@ -15,6 +15,6 @@
   "dependencies": {
     "commander": "^14.0.3"
   },
-  "author": "",
+  "author": "Ilya Ovdin <iovdin@gmail.com>",
   "license": "MIT"
 }
