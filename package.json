@@ -18,6 +18,7 @@
     "start": "node bin/bunk.js"
   },
   "dependencies": {
+    "@napi-rs/keyring": "^1.1.0",
     "commander": "^14.0.3"
   },
   "author": "Ilya Ovdin <iovdin@gmail.com>",

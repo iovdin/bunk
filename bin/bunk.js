@@ -3,7 +3,6 @@
 const { Command } = require('commander');
 const { auth } = require('../lib/auth');
 const { fetchEvents } = require('../lib/fetch');
-const { indexPayments } = require('../lib/index');
 
 const program = new Command();
 
@@ -14,7 +13,7 @@ program
 
 program
   .command('auth')
-  .description('Authenticate with bunq using OAuth2 and store tokens in ~/.config/bunk/config.txt')
+  .description('Authenticate with bunq using OAuth2 and store tokens in keyring')
   .option('-p, --port <port>', 'Local callback server port', (v) => parseInt(v, 10), 4589)
   .option('--host <host>', 'Local callback server host', '127.0.0.1')
   .action(async (opts) => {
@@ -29,14 +28,6 @@ program
   .option('--clean', 'Remove existing database and re-fetch everything', false)
   .action(async (opts) => {
     await fetchEvents(opts);
-  });
-
-program
-  .command('index')
-  .description('Index latest events into payments table')
-  .option('-o, --output <path>', 'Output SQLite database path', '~/bunq/index.sqlite')
-  .action(async (opts) => {
-    await indexPayments(opts);
   });
 
 program.parseAsync(process.argv).catch((err) => {
