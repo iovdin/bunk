@@ -1,6 +1,6 @@
 {
   "name": "@iovdin/bunk",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "homepage": "https://github.com/iovdin/bunk#readme",
   "description": "bunq CLI download and index transactions into sqlite database",
   "type": "commonjs",
